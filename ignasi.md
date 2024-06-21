@@ -76,5 +76,14 @@ python -m pip install -U Django
 # Comprovo les princiapls funcionalitats.
 python manage.py runserver
 
-Si tot funciona bé puc fer una etiqueta
-git tag
+Si tot funciona bé .... 
+Copio la configuració
+pip freeze > requirements.txt
+
+Recorda que som a la branca 'develop'
+
+Puc fer un commit i una etiqueta
+git add .
+git commit -m 'Actualitzat a Django 5.0.6'
+git tag 'Django_506'
+git push --set-upstream origin develop
