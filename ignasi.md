@@ -8,6 +8,7 @@ Escurço el nom
 mv django-tailwind-blog/ django-blog
 
 # Entorn virtual Python
+sudo apt-get install python3-venv    # If needed
 python3 -m venv .venv
 source .venv/bin/activate
  
@@ -23,7 +24,7 @@ pip install django-tailwind
 python manage.py tailwind init
 python manage.py tailwind install
 
-# Ups falta node!!!
+# Ups falta node o el path!!!
 # installs nvm (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
@@ -52,7 +53,8 @@ python manage.py tailwind install
 
 Un problemilla de seguretat
 npm audit fix
-
+També cal 
+npm i --package-lock-only
 # Finalment crea la base de dades (SQLite per defecte no l'he canviat)
 
 python manage.py migrate
@@ -67,3 +69,30 @@ Pots editar els blocs etc
 
 # Versió 4.1.4
 Me n'adono que la versió és la Django 4.1.4 i ja van per la 5 la qual cosa pot ser un problema. 
+
+# Canvio amb git a la branca develop
+git checkout -b "develop"
+
+# actualitza Python
+python -m pip install -U Django
+# Comprovo les princiapls funcionalitats.
+python manage.py runserver
+
+Si tot funciona bé .... 
+Copio la configuració
+pip freeze > requirements.txt
+
+Recorda que som a la branca 'develop'
+
+Puc fer un commit i una etiqueta
+git add .
+git commit -m 'Actualitzat a Django 5.0.6'
+git tag 'Django_506'
+git push --set-upstream origin develop
+
+
+# Hi ha un munt de fitxers amb extensió .pyc els vull treure 
+Afegeixo *.pyc a .gitignore
+git rm --cached *.pyc
+git add .gitignore
+git commit -m 'Treure els fitxer *.pyc'
