@@ -8,6 +8,7 @@ Escurço el nom
 mv django-tailwind-blog/ django-blog
 
 # Entorn virtual Python
+sudo apt-get install python3-venv    # If needed
 python3 -m venv .venv
 source .venv/bin/activate
  
