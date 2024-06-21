@@ -23,7 +23,7 @@ pip install django-tailwind
 python manage.py tailwind init
 python manage.py tailwind install
 
-# Ups falta node!!!
+# Ups falta node o el path!!!
 # installs nvm (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
@@ -52,7 +52,8 @@ python manage.py tailwind install
 
 Un problemilla de seguretat
 npm audit fix
-
+També cal 
+npm i --package-lock-only
 # Finalment crea la base de dades (SQLite per defecte no l'he canviat)
 
 python manage.py migrate
@@ -87,3 +88,10 @@ git add .
 git commit -m 'Actualitzat a Django 5.0.6'
 git tag 'Django_506'
 git push --set-upstream origin develop
+
+
+# Hi ha un munt de fitxers amb extensió .pyc els vull treure 
+Afegeixo *.pyc a .gitignore
+git rm --cached *.pyc
+git add .gitignore
+git commit -m 'Treure els fitxer *.pyc'
