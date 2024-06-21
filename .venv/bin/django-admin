@@ -1,4 +1,4 @@
-#!/home/ignasi/django-blog/.venv/bin/python3
+#!/home/ignasi/django-blog/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

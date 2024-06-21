@@ -67,3 +67,14 @@ Pots editar els blocs etc
 
 # Versió 4.1.4
 Me n'adono que la versió és la Django 4.1.4 i ja van per la 5 la qual cosa pot ser un problema. 
+
+# Canvio amb git a la branca develop
+git checkout -b "develop"
+
+# actualitza Python
+python -m pip install -U Django
+# Comprovo les princiapls funcionalitats.
+python manage.py runserver
+
+Si tot funciona bé puc fer una etiqueta
+git tag
