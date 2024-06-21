@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'basic',
     'tailwind',
     'theme',
     'tinymce',
@@ -51,7 +52,8 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+# NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+NPM_BIN_PATH = "/home/ignasi/.nvm/versions/node/v20.15.0/bin/npm"
 
 MIDDLEWARE = [
     "django_browser_reload.middleware.BrowserReloadMiddleware",
